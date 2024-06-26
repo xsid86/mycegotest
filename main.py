@@ -65,10 +65,10 @@ if __name__ == '__main__':
     rows = math.ceil(len(images) / per_row)
 
     # Concatenate images into single image (suppose all images has the same dimensions, otherwise code need to be modified) # todo attention to image sizes
-    # Take dimensions of the firs image
+    # Take dimensions of the first image
     img = Image.open(f'{images[0]}')
     result_image = Image.new('CMYK', (img.width * per_row + SPACER * (per_row + 1), img.height * rows + SPACER * (rows + 1)))
-    _col, _row = 0, 0
+    _col = 0
     x, y = SPACER, SPACER
     for image in images:
         img = Image.open(f'{image}')
